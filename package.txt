@@ -1,0 +1,35 @@
+npm project 
+1.  npm create vite@latest
+    - ตั้งชื่อ
+    - เลือก framework , libary
+    - เลือก ภาษา
+    - cd เข้า <ชื่อ project>
+    - npm install
+    - npm run dev (run server)
+    - npm run build (สำหรับการ deploy)
+
+
+2.  ติดตั้ง tailwindcss | URL : https://tailwindcss.com/docs/guides/vite
+    - npm install -D tailwindcss postcss autoprefixer
+    - npx tailwindcss init -p
+
+    2.1 เพิ่มโค้ดใน tailwind.config.js ดังนนี้
+      content: ["./index.html","./src/**/*.{js,ts,jsx,tsx}"],
+
+    2.2 เพิ่มโค้ดใน index.css
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+3. ติดตั้ง daisyUI เป็น Plugin ของ tailwindCSS | URL : https://daisyui.com/docs/install/
+    - npm i -D daisyui@latest
+
+    3.1 เพิ่มโค้ดใน tailwind.config.js ดังนนี้
+        import daisyui from 'daisyui';
+        plugins: [daisyui],
+
+4. ติดตั้ง fontawesome | URL: https://docs.fontawesome.com/web/use-with/react
+    - npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+
+5. ติตตั้ง router สำหรับการการ link
+    - npm install react-router-dom
